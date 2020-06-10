@@ -1,0 +1,14 @@
+[{
+  "active": true,
+  "createdDate": "2020-04-24T07:00:57Z",
+  "domain": null,
+  "email": "admin@localhost",
+  "groupId": null,
+  "groups": [],
+  "id": 1,
+  "langKey": "en",
+  "login": "admin",
+  "roles": ["ROLE_ADMIN", "ROLE_GROUPADMIN"],
+  "userName": "Administrator",
+  "vdiAdmin": null
+}]

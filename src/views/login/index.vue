@@ -112,16 +112,15 @@
 
 <style lang="scss" scoped>
     .login-container {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        background-color: $loginBg;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         position: relative;
-
+        height: 100%;
+        width: 100%;
+        background: url('~@/assets/0.jpg');
+        overflow: hidden;
         > section {
             position: absolute;
             background-color: rgba(250, 250, 250, 0.8);

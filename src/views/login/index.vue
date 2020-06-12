@@ -119,7 +119,7 @@
         position: relative;
         height: 100%;
         width: 100%;
-        background: url('~@/assets/0.jpg');
+        background: url('~@/assets/bg_logo.jpg');
         overflow: hidden;
         > section {
             position: absolute;

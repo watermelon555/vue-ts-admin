@@ -1,0 +1,40 @@
+{
+  "name": "express-backend",
+  "version": "1.0.0",
+  "description": "基于 Express 的 Node.js 的后端开发",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./src/app.js --exec babel-node"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "JavaScript"
+  ],
+  "author": "lili_sakura@126.com",
+  "license": "ISC",
+  "dependencies": {
+    "awilix": "^4.2.6",
+    "awilix-express": "^3.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "env2": "^2.2.2",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.1.0",
+    "pm2": "^4.4.0",
+    "sequelize": "^5.21.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.3"
+  }
+}

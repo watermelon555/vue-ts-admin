@@ -1,13 +1,13 @@
 import request from '@/utils/request'
 export const login = (data: any) =>
     request({
-        url: '/api/login/login_post',
+        url: '/api/login',
         method: 'POST',
         data
     })
 
 export const getUserInfo = () =>
   request({
-    url: '/api/all',
+    url: '/api/roles',
     method: 'GET'
   })

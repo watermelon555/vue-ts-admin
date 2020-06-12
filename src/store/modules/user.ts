@@ -47,7 +47,6 @@ class User extends VuexModule implements IUserState {
         // const {data} = await getUserInfo()
         // console.log('user', data)
         const {data} = await login({username, password});
-        console.log(data)
         setToken(`Bearer ${data.idToken}`)
         this.SET_TOKEN(`Bearer ${data.idToken}`)
         router.push({path: '/'});

@@ -29,3 +29,30 @@ export default function (sequelize, DataTypes) {
     );
     return Login;
 }
+
+// export default function (sequelize, DataTypes) {
+//     class Roles extends Sequelize.Model {}
+//     Roles.init(
+//         {
+//             id: {
+//                 type: DataTypes.INTEGER,
+//                 primaryKey: true,
+//                 autoIncrement: true,
+//             },
+//             userId: {
+//                 type: DataTypes.INTEGER,
+//                 allowNull: false,
+//             },
+//             roles: {
+//                 type: DataTypes.STRING,
+//                 allowNull: false,
+//             }
+//         },
+//         {
+//             sequelize,
+//             modelName: 'roles',
+//             tableName: 'roles',
+//         }
+//     );
+//     return Roles;
+// }

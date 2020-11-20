@@ -7,7 +7,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const { env } = process;
-
 module.exports = {
   development: {
     username: env.MYSQL_USER,

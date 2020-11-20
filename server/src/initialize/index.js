@@ -8,7 +8,6 @@ import config from '../config/config'
 export default function initialize() {
   const env = process.env.NODE_ENV || 'development'
   const sequelize = initSequelize(config[env]); // 初始化 sequelize
-  // console.log('sequelize', sequelize);
   initModel(sequelize); // 初始化 Model
   container.register({
     sequelize: asValue(sequelize),

@@ -4,14 +4,17 @@
   "description": "基于 Express 的 Node.js 的后端开发",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./src/app.js --exec babel-node"
+    "clean": "rimraf dist",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/app.js --exec babel-node",
+    "babel": "babel ./src --out-dir dist",
+    "build": "cross-env NODE_ENV=production npm run clean && npm run babel",
+    "start": "pm2 start pm2.json"
   },
   "keywords": [
     "Node.js",
     "Express",
     "JavaScript"
   ],
-  "author": "lili_sakura@126.com",
   "license": "ISC",
   "dependencies": {
     "awilix": "^4.2.6",
@@ -24,6 +27,7 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
     "pm2": "^4.4.0",
     "sequelize": "^5.21.7"
   },

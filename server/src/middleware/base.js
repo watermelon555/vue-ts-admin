@@ -10,7 +10,7 @@ export function baseMiddleware(app) {
         status,
         success: true,
         timestamp: new Date(),
-        type: 'SUCCRSS',
+        type: 'SUCCESS',
       });
     };
     res.fail = (data, error = null, message = '失败', status = 0) => {

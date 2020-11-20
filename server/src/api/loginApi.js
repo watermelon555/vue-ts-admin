@@ -1,5 +1,5 @@
 import bodyParser from 'body-parser'
-import { route, POST, before } from 'awilix-express'
+import { route, POST, before, GET } from 'awilix-express'
 import jwt from 'jsonwebtoken';
 
 @route('/')
@@ -18,8 +18,7 @@ export default class LoginApi {
         // Token 数据
         const payload = {
             username: data.username,
-            password: data.password,
-            admin: true
+            password: data.password
         };
         // 密钥
         const secretOrKey = 'secret';
@@ -30,19 +29,20 @@ export default class LoginApi {
             return res.success(res.json({id_token:token}));
         } else {
             res.statusCode = 400;
-            res.fail(null, message, message);
+           return res.fail(null, message, message);
         }
     }
 
     @route('roles')
-    @POST()
+    @GET()
     @before([bodyParser.json()])
     async roles(req, res) {
         const { success, data, message } = await this.loginService.roles(
             req.body
         );
+
         if (success) {
-            return res.success(res.json({id_token:token}));
+            return res.success();
         } else {
             res.statusCode = 400;
             res.fail(null, message, message);

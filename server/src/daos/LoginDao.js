@@ -7,9 +7,12 @@ export default class LoginDao extends BaseDao {
 
     // 登录
     async login(item) {
-        console.log(item, item);
         const query = getFindSql(item);
-        console.log(query, 'query');
+        return await this.findOne(query);
+    }
+
+    async roles(item) {
+        const query = getFindSql(item);
         return await this.findOne(query);
     }
 

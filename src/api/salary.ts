@@ -10,3 +10,9 @@ export const getAccountRecords = (params: any) =>
             status: params.status
         }
     })
+
+export const getChart = (params: any) =>
+    request({
+        url: params,
+        method: 'get'
+    })

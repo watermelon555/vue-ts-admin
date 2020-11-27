@@ -217,7 +217,7 @@ export default {
 @Component
 export default class YourComponent extends Vue {
   @Watch('child')
-  onChildChanged(val: string, oldVal: string) {}
+  onChildChanged(~~val: string, oldVal: string~~) {}
 
   @Watch('person', { immediate: true, deep: true })
   onPersonChanged(val: Person, oldVal: Person) {}

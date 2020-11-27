@@ -44,6 +44,7 @@ class Permission extends VuexModule implements IPermissionState {
 
   @Mutation
   private SET_ROUTES(routes: RouteConfig[]) {
+    console.log(routes, '====routes======')
     this.routes = constantRoutes.concat(routes)
     this.dynamicRoutes = routes
   }
@@ -51,11 +52,11 @@ class Permission extends VuexModule implements IPermissionState {
   @Action
   public GenerateRoutes(roles: string[]) {
     let accessedRoutes
-    // if (roles.includes('admin')) {
-    //     accessedRoutes = asyncRoutes
-    // } else {
-    accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
-    // }
+    if (roles.includes('admin')) {
+        accessedRoutes = asyncRoutes
+    } else {
+        accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
+    }
     this.SET_ROUTES(accessedRoutes)
   }
 }

@@ -47,8 +47,9 @@ class User extends VuexModule implements IUserState {
         // const {data} = await getUserInfo()
         // console.log('user', data)
         const {data} = await login({username, password});
-        setToken(`Bearer ${data.idToken}`)
-        this.SET_TOKEN(`Bearer ${data.idToken}`)
+        console.log(data, 'data========')
+        setToken(`Bearer ${data.id_token}`)
+        this.SET_TOKEN(`Bearer ${data.id_token}`)
         router.push({path: '/'});
     }
 
@@ -58,12 +59,15 @@ class User extends VuexModule implements IUserState {
         if (this.id_token === '') {
             throw Error('GetUserInfo: token is undefined!')
         }
-        const {data} = await getUserInfo()
-        console.log('user', data)
-        if (!data) {
-            throw Error('Verification failed, please Login again.')
+        // const {data} = await getUserInfo()
+        // console.log('user', data)
+        // if (!data) {
+        //     throw Error('Verification failed, please Login again.')
+        // }
+        const data ={
+            roles: ['admin']
         }
-        const {roles} = data
+        const { roles } = data
         // roles must be a non-empty array
         if (!roles || roles.length <= 0) {
             throw Error('GetUserInfo: roles must be a non-null array!')

@@ -79,7 +79,7 @@
 
         private loading = false
         private loginForm = {
-            password: "Yunjuzhen2019",
+            password: "admin12345",
             username: "admin"
         }
 
@@ -88,7 +88,6 @@
 
         handleLogin() {
             (this.$refs.loginForm as ElForm).validate(async (valid: boolean) => {
-                console.log(this.$router)
                 if (valid) {
                     this.loading = true
                     await UserModule.Login({

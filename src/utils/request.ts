@@ -11,7 +11,6 @@ service.interceptors.request.use(
     if (UserModule.id_token) {
       config.headers['Authorization'] = UserModule.id_token
     }
-    console.log(config);
     return config;
   },
   error => {

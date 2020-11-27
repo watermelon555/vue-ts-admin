@@ -12,3 +12,5 @@ declare module 'element-ui/lib/locale/lang/*' {
 }
 
 declare module 'qs'
+declare module 'ol/Map'
+

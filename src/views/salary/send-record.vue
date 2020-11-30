@@ -40,12 +40,15 @@
       <el-button type="primary" @click="onSubmit">立即创建</el-button>
       <el-button>取消</el-button>
     </el-form-item>-->
+
+    <SubmitButton :submit="submit"></SubmitButton>
   </el-form>
 </template>
 
 <script lang="ts">
 import {Component, Vue, Prop} from 'vue-property-decorator'
 import FormItem from "@/components/FormItem/index.vue";
+import SubmitButton, { SubmitAction } from "@/components/SubmitButton/index.vue";
 
 export interface IType {
   type: string
@@ -65,7 +68,7 @@ export interface OptionsData {
 
 @Component({
   name: 'SendRecord',
-  components: {FormItem}
+  components: {SubmitButton, FormItem}
 })
 export default class extends Vue {
   data() {
@@ -137,16 +140,26 @@ export default class extends Vue {
     {
       type: 'switch',
       label: '即时配送',
+      name: '',
       placeholder: '请选择',
       delivery: ''
     }
   ]
+  private submit: SubmitAction={
+    confirm: '确定',
+    cancel: '取消',
+    onSubmit: this.onSubmit,
+    onCancel: this.onCancel
+  }
 
 
+  public onCancel() {
+    console.log('取消')
+  }
 
 
   public onSubmit() {
-    console.log('submit!');
+    console.log('确定', this.formType)
   }
 
 }

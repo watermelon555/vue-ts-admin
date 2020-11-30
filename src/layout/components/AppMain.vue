@@ -30,6 +30,7 @@ export default class extends Vue {
   min-height: calc(100vh - 50px);
   width: 100%;
   position: relative;
+  padding: 15px;
   overflow: hidden;
 }
 

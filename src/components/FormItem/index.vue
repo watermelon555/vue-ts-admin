@@ -42,7 +42,7 @@ const ORIGINAL_THEME = '#409EFF' // default color
 export default class extends Vue {
   @Prop({}) item: IType | undefined
   mounted() {
-
+    console.log(this.item,'=========item')
   }
 
 

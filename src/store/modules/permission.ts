@@ -44,7 +44,6 @@ class Permission extends VuexModule implements IPermissionState {
 
   @Mutation
   private SET_ROUTES(routes: RouteConfig[]) {
-    console.log(routes, '====routes======')
     this.routes = constantRoutes.concat(routes)
     this.dynamicRoutes = routes
   }

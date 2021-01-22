@@ -8,10 +8,10 @@ export default class LoginService extends BaseService {
     // 登录
     async login(params) {
         const [err, list] = await this.loginDao.login(params);
-        if (err || !list) {
+/*        if (err || !list) {
             return this.fail('登录失败', err);
         }
-        console.log(list, '====login')
+        console.log(list, '====login')*/
         return this.success('登录成功', list || []);
     }
 

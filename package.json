@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode production",
-    "svg": "vsvg -s ./src/icons/svg -t ./src/icons/components --ext ts --es6"
+    "svg": "vsvg -s ./src/icons/svg -t ./src/icons/components --ext ts --es6",
+    "test": "vue-cli-service test --mode test"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -18,7 +19,6 @@
     "mysql": "^2.18.1",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
-
     "path-to-regexp": "^6.1.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
@@ -31,8 +31,8 @@
     "vuex-module-decorators": "^0.11.0"
   },
   "devDependencies": {
-    "ol": "^6.4.3",
     "@types/echarts": "^4.4.2",
+    "@types/jest": "^26.0.20",
     "@types/js-cookie": "^2.2.4",
     "@types/mockjs": "^1.0.2",
     "@types/nprogress": "^0.2.0",
@@ -40,17 +40,29 @@
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-plugin-router": "^4.1.0",
     "@vue/cli-plugin-typescript": "^4.1.0",
+    "@vue/cli-plugin-unit-jest": "^4.5.10",
     "@vue/cli-plugin-vuex": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
+    "@vue/test-utils": "^1.1.2",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^26.6.3",
     "babel-plugin-component": "^1.1.1",
+    "jest": "^26.6.3",
+    "jest-serializer-vue": "^2.0.2",
     "mockjs": "^1.1.0",
     "node-sass": "^4.13.0",
+    "ol": "^6.4.3",
     "qs": "^6.9.4",
     "sass-loader": "^8.0.0",
     "style-resources-loader": "^1.3.3",
+    "ts-jest": "^26.4.4",
     "typescript": "~3.5.3",
     "vue-axios": "^2.1.5",
     "vue-cli-plugin-element": "^1.0.1",
+    "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.10"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
   }
 }

@@ -10,5 +10,10 @@ module.exports = {
         "styleLibraryName": "theme-chalk"
       }
     ]
-  ]
+  ],
+  "test": {
+    "presets": [
+      "env"
+    ]
+  }
 }

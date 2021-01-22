@@ -123,6 +123,22 @@ export const asyncRoutes: RouteConfig[] = [
         ]
     },
     {
+        path: '/drag',
+        component: Layout,
+        children: [
+            {
+                path: 'index',
+                component: () => import(/* webpackChunkName: "recharges" */ '@/views/drag/index.vue'),
+                name: 'canvasDrag',
+                meta: {
+                    title: 'canvasDrag',
+                    icon: 'table',
+                    noCache: true
+                }
+            }
+        ]
+    },
+    {
         path: '/help-center',
         component: Layout,
         children: [

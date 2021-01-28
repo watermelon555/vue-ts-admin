@@ -1,13 +1,13 @@
 <template>
   <div class="drag-container">
     <div>huabu</div>
-    <component is="CanvasDrag" />
+    <CanvasDrag>DKJF</CanvasDrag>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import CanvasDrag from '@/components/CanvasDrag'
+import CanvasDrag from '@/components/CanvasDrag/index.vue'
 
 @Component({
   name: 'Drag',

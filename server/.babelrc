@@ -7,7 +7,9 @@
         "targets": {
           "node": "current"
         }
-      }
+      },
+      "es2015",
+      "vue"
     ]
   ],
   "plugins": [
